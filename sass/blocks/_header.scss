@@ -1,0 +1,116 @@
+.header {
+    padding: 25px 0;
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__items {
+        display: flex;
+        align-items: center;
+        column-gap: 60px;
+    }
+    input {
+        display: none;
+        &:checked ~ .menu {
+            right: 0;
+        }
+    }
+    &__burger {
+        width: 62px;
+        height: 36px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 9px;
+        cursor: pointer;
+        div {
+            width: 48px;
+            height: 2px;
+            background: #000000;
+            border-radius: 3px;
+            transition: 0.3s all;
+        }
+        &:hover {
+            div {
+                background: #7166DD; 
+            }
+        }
+    }
+    nav {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        a {
+            &:hover {
+                color: #7166DD;
+            }
+        }
+    }
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.call {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: 0.01em;
+    span {
+        font-size: 12px;
+        line-height: 1.17;
+        color: #8E8E8E;
+    }
+}
+
+.order-call {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 20px;
+    gap: 9px;
+    border: 1px solid #B9B9B9;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    path {
+        transition: all 0.3s;
+    }
+    &:hover {
+        background: #7166DD;
+        border: 1px solid #7166DD;
+        color: white;
+        path {
+            fill: white;
+        }
+    }
+    &:active {
+        background: #5647db;
+        border: 1px solid #5647db;
+        transition: none;
+    }
+}
+
+@media (min-width: 1656px) {
+    .header .container {
+        width: 1596px;
+    }
+}

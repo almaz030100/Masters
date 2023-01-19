@@ -1,0 +1,22 @@
+.advantages {
+    margin: 80px 0 100px;
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+    &__item {
+        background: #F6F6FA;
+        border-radius: 5px;
+        padding: 24px 24px 24px 40px;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        font-weight: 500;
+        font-size: 30px;
+        letter-spacing: 0.02em;
+        span {
+            max-width: 504px;
+        }
+    }
+}
