@@ -1,14 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    // Fancybox settings
-    (function() {
-        Fancybox.bind("[data-fancybox]", {
-            autoFocus: false,
-            dragToClose: false
-        });
-    }());
-
-
     // Form validation
     (function() {
         $('form').each(function() {
