@@ -1,0 +1,112 @@
+.choice {
+    padding-top: 100px;
+    .splide {
+        margin-top: 57px;
+        &__slide {
+            height: 260px;
+            background: url('../img/choice/bg-1.jpg') center center / cover no-repeat;
+            padding: 16px 25px 25px 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            &:nth-child(2) {
+                background-image: url('../img/choice/bg-2.jpg');
+            }
+            &:nth-child(3) {
+                background-image: url('../img/choice/bg-3.jpg');
+            }
+        }
+    }
+    .splide.is-initialized:not(.is-active) .splide__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+    &__item {
+        &-title {
+            font-weight: 500;
+            font-size: 30px;
+            line-height: 0.93;
+            letter-spacing: 0.02em;
+        }
+        &-subtitle {
+            display: block;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 1.23;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            color: #271737;
+            margin-top: 11px;
+            &:hover {
+                text-decoration: underline;
+                color: #000;
+            }
+        }
+        &-prefer {
+            font-weight: 400;
+            font-size: 18px;
+            letter-spacing: 0.01em;
+        }
+        &-icons {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+    }
+}
+
+@media (max-width: 1599px) {
+    .choice__item-title {
+        font-size: 29px;
+    }
+}
+
+@media (max-width: 1399px) {
+    .choice .splide.is-initialized:not(.is-active) .splide__list {
+        grid-template-columns: repeat(2, 440px);
+    }
+}
+
+@media (max-width: 991px) {
+    .choice .splide__slide {
+        width: 440px;
+    }
+}
+
+@media (max-width: 575px) {
+    .choice .splide__slide {
+        width: 260px;
+        padding: 13px;
+        height: 152px;
+        background: url("../img/choice/bg-1.jpg") left top/cover no-repeat;
+    }
+    .choice__item-title {
+        font-size: 18px;
+    }
+    .choice .splide__slide:nth-child(2) {
+        .choice__item-title {
+            max-width: 160px;
+        }
+    }
+    .choice__item-subtitle {
+        font-size: 12px;
+        margin-top: 6px;
+    }
+    .choice__item-prefer {
+        font-size: 14px;
+    }
+    .choice__item-icons {
+        margin-top: 5px;
+        img {
+            width: 20px;
+        }
+    }
+    .choice {
+        padding-top: 40px;
+    }
+    .choice .splide {
+        margin-top: 20px;
+    }
+}

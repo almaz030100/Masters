@@ -1,0 +1,28 @@
+.form {
+    input {
+        height: 67px;
+        background: #8579FF;
+        border: 1px solid #9B92FF;
+        border-radius: 5px;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        padding: 0px 15px 0 30px;
+        &::placeholder {
+            color: #fff;
+        }
+        &:focus-visible {
+            outline: 1px solid #fff;
+        }
+    }
+}
+
+label.error {
+    display: none !important;
+}
+
+input.error {
+    outline: 1px solid red;
+}

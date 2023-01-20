@@ -114,3 +114,36 @@
         width: 1596px;
     }
 }
+
+@media (max-width: 1599px) {
+    .header__items {
+        column-gap: 30px;
+    }
+}
+
+@media (max-width: 1399px) {
+    .header nav {
+        display: none;
+    }
+}
+
+@media (max-width: 991px) {
+    .header__right .social {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .header__right {
+        display: none;
+    }
+    .header__left {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .header__logo {
+        img {
+            width: 111px;
+        }
+    }
+}

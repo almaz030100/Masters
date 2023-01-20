@@ -7,21 +7,15 @@ body {
     font-family: 'Venti CF';
 }
 
+.pagewrapper {
+    overflow: hidden;
+}
+
 .title {
     font-family: 'Venti CF';
     font-weight: 700;
     font-size: 40px;
     line-height: 1.15;
-}
-
-.tac {
-    text-align: center;
-}
-
-@media (max-width: 991px) {
-    .tal {
-        text-align: center;
-    }
 }
 
 @media (max-width: 1599px) {
@@ -52,10 +46,16 @@ body {
     .container {
         width: 540px;
     }
+    .title {
+        font-size: 35px;
+    }
 }
 
 @media (max-width: 575px) {
     .container {
         width: 300px;
+    }
+    .title {
+        font-size: 25px;
     }
 }

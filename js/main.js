@@ -33,11 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
                         maxlength: 50,
                         email: true
                     },
-                    city: {
-                        required: true,
-                        minlength: 2,
-                        maxlength: 50
-                    }
                 },
             });
         });
@@ -56,43 +51,47 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // Sliders
-    // (function() {
+    (function() {
 
-    //     new Splide('.promo .splide', {
-    //         type: 'loop',
-    //         arrows: false,
-    //         pagination: true,
-    //         gap: '50px',
-    //         mediaQuery: 'min',
-    //         breakpoints: {
-    //             768: {
-    //                 destroy: true
-    //             }
-    //         }
-    //     }).mount();
+        new Splide('.decisions__wrapper', {
+            arrows: true,
+            pagination: false,
+            gap: '100px',
+            breakpoints: {
+                991: {
+                    destroy: true
+                }
+            }
+        }).mount();
 
-    // }());
+        new Splide('.choice .splide', {
+            arrows: false,
+            pagination: false,
+            gap: '10px',
+            mediaQuery: 'min',
+            autoWidth: true,
+            breakpoints: {
+                992: {
+                    destroy: true
+                },
+                576: {
+                    gap: '40px'
+                }
+            }
+        }).mount();
+
+    }());
 
 
-    // Показываем модальное окно при уходе со страницы
-    // (function() {
-    //     function t() {
-    //         Fancybox.show(
-    //             [
-    //                 {
-    //                     src: '#modal3',
-    //                 },
-    //             ],
-    //             {
-    //                 autoFocus: false,
-    //                 dragToClose: false
-    //             }
-    //         );
-    //     }
+    // Expand items
+    (function() {
+        const expandButton = document.querySelector('.decisions__expand'),
+              hiddenItems = document.querySelector('.splide__slide_hidden');
 
-    //     $(document).one("mouseleave", function (e) {
-    //         $("#pageMain").length && e.clientY < 10 && t();
-    //     });
-    // }());
+        expandButton.addEventListener('click', () => {
+            hiddenItems.classList.remove('splide__slide_hidden');
+            expandButton.style.display = 'none';
+        });
+    }());
 
 });
