@@ -77,9 +77,9 @@
 
 @media (max-width: 575px) {
     .choice .splide__slide {
-        width: 260px;
+        width: 320px;
         padding: 13px;
-        height: 152px;
+        height: 170px;
         background: url("../img/choice/bg-1.jpg") left top/cover no-repeat;
     }
     .choice__item-title {
@@ -108,5 +108,12 @@
     }
     .choice .splide {
         margin-top: 20px;
+    }
+}
+
+@media (max-width: 419px) {
+    .choice .splide__slide {
+        width: 260px;
+        height: 152px;
     }
 }
